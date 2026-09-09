@@ -16,7 +16,7 @@ body, html {
     padding: 20px;
     box-sizing: border-box;
     /* PERCORSO AGGIORNATO */
-    background-image: url('image/tuscany-vineyard-background.jpg');
+    background-image: url('/image/tuscany-vineyard-background.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -158,7 +158,7 @@ body, html {
     overflow: hidden;
     position: relative;
     /* PERCORSO AGGIORNATO */
-    background-image: url('image/grape-leaf.jpg');
+    background-image: url('/image/grape-leaf.jpg');
     background-size: cover;
     background-position: center;
 }
