@@ -1,0 +1,330 @@
+/* =========================================================
+   Kydorobotics — foglio di stile
+   Mobile first: le regole base valgono per lo smartphone,
+   le media query aggiungono tablet (>=720px) e desktop (>=1024px).
+   ========================================================= */
+
+:root {
+    --blu-fondo: #0b0f19;
+    --blu-pannello: rgba(15, 23, 42, 0.82);
+    --azzurro: #38bdf8;
+    --grigio-testo: #cbd5e1;
+    --grigio-etichetta: #94a3b8;
+    --ambra: #f5a524;
+    --bordo: rgba(255, 255, 255, 0.10);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    background-color: var(--blu-fondo);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Contenitore principale con sfondo -------------------
+   I percorsi sono RELATIVI (image/...), non assoluti (/image/...):
+   così funzionano sul dominio, in sottocartella e in locale.
+   Sotto alla foto c'è un gradiente di riserva: se la foto manca
+   o non è ancora stata caricata, la pagina resta leggibile.
+   --------------------------------------------------------- */
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 18px;
+    background-color: var(--blu-fondo);
+    background-image:
+        linear-gradient(rgba(8, 13, 24, 0.78), rgba(8, 13, 24, 0.90)),
+        url('image/tuscany-vineyard-background.jpg'),
+        radial-gradient(120% 80% at 20% 0%, #1d3a2c 0%, #101a26 55%, #0b0f19 100%);
+    background-size: cover, cover, cover;
+    background-position: center, center, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    overflow-x: hidden;
+}
+
+/* --- Intestazione --- */
+.main-header {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.header-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+/* Il logo è un JPG su fondo bianco: gli diamo una targhetta chiara,
+   altrimenti sul fondo scuro si vedrebbe un rettangolo bianco netto. */
+.logo-wrapper {
+    display: inline-flex;
+    align-items: center;
+    background: #fff;
+    padding: 8px 14px;
+    border-radius: 10px;
+    line-height: 0;
+    text-decoration: none;
+}
+
+.logo-wrapper:focus-visible {
+    outline: 3px solid var(--azzurro);
+    outline-offset: 3px;
+}
+
+.logo-lockup {
+    width: auto;
+    height: 30px;
+    display: block;
+}
+
+.launch-badge {
+    margin: 0;
+    background-color: var(--ambra);
+    color: #1a1206;
+    padding: 7px 15px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.main-title {
+    font-size: 1.85rem;
+    line-height: 1.2;
+    margin: 0 0 14px;
+    letter-spacing: -0.01em;
+}
+
+.main-description {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--grigio-testo);
+    max-width: 62ch;
+    margin: 0 auto;
+}
+
+/* --- Dashboard --- */
+.ui-dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.widget {
+    background: var(--blu-pannello);
+    border: 1px solid var(--bordo);
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+.widget-header {
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--azzurro);
+}
+
+.widget-data {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.data-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 0;
+    min-width: 0;
+}
+
+.value {
+    font-weight: 700;
+    font-size: 1.3rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.label {
+    color: var(--grigio-etichetta);
+    font-size: 0.8rem;
+}
+
+/* --- Widget riconoscimento immagini --- */
+.od-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Stessa logica dello sfondo: foto vera, sotto una foglia
+   disegnata in SVG come segnaposto, sotto ancora un gradiente. */
+.od-image-wrapper {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background-color: #1e293b;
+    background-image:
+        url('image/grape-leaf.jpg'),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M60 20 C82 30 98 46 98 64 C98 84 81 98 60 98 C39 98 22 84 22 64 C22 46 38 30 60 20 Z' fill='%233f7a52'/%3E%3Cg fill='none' stroke='%23bfe3c4' stroke-width='2.5' stroke-linecap='round' opacity='.65'%3E%3Cpath d='M60 100 L60 30'/%3E%3Cpath d='M60 76 L36 58'/%3E%3Cpath d='M60 76 L84 58'/%3E%3Cpath d='M60 58 L42 44'/%3E%3Cpath d='M60 58 L78 44'/%3E%3C/g%3E%3C/svg%3E"),
+        linear-gradient(160deg, #24402f, #16202c);
+    background-size: cover, 110px auto, cover;
+    background-position: center, center, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+}
+
+.bounding-box {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    width: 50%;
+    height: 50%;
+    border: 3px solid var(--azzurro);
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35);
+}
+
+.od-data {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--grigio-testo);
+    text-align: center;
+}
+
+/* --- Piè di pagina --- */
+.main-footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.82rem;
+    padding: 20px 0 4px;
+    color: var(--grigio-etichetta);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.main-footer p {
+    margin: 0;
+}
+
+/* =========================================================
+   Tablet e smartphone in orizzontale
+   ========================================================= */
+@media screen and (min-width: 720px) {
+    .page-container {
+        padding: 32px 32px;
+    }
+
+    .main-title {
+        font-size: 2.4rem;
+    }
+
+    .ui-dashboard {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .logo-lockup {
+        height: 34px;
+    }
+}
+
+/* =========================================================
+   Desktop: testo a sinistra, dashboard a destra
+   ========================================================= */
+@media screen and (min-width: 1024px) {
+    .page-container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 440px;
+        grid-template-rows: 1fr auto;
+        column-gap: 56px;
+        align-items: center;
+        padding: 48px 56px 24px;
+    }
+
+    .main-header {
+        text-align: left;
+        margin-bottom: 0;
+        align-self: center;
+    }
+
+    .header-top {
+        justify-content: flex-start;
+    }
+
+    .main-title {
+        font-size: 3rem;
+        margin-bottom: 18px;
+    }
+
+    .main-description {
+        margin: 0;
+        font-size: 1.05rem;
+    }
+
+    .ui-dashboard {
+        margin-bottom: 0;
+        align-self: center;
+    }
+
+    .main-footer {
+        grid-column: 1 / -1;
+        margin-top: 40px;
+    }
+
+    .logo-lockup {
+        height: 38px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .page-container {
+        grid-template-columns: minmax(0, 1fr) 520px;
+        padding: 56px 90px 28px;
+    }
+
+    .main-title {
+        font-size: 3.4rem;
+    }
+}
+
+/* Rispetta la preferenza di movimento ridotto e la stampa */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+@media print {
+    .page-container {
+        background: #fff;
+        color: #000;
+    }
+}
