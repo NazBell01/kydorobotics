@@ -1,0 +1,491 @@
+/* =========================================================
+   Kydo Robotics — foglio di stile
+   Mobile first: le regole base valgono per lo smartphone,
+   le media query aggiungono tablet (>=720px) e desktop (>=1024px).
+   ========================================================= */
+
+:root {
+    --blu-fondo: #0b0f19;
+    --blu-scuro: #080c15;
+    --blu-pannello: rgba(15, 23, 42, 0.86);
+    --azzurro: #38bdf8;
+    --verde: #6ee7a5;
+    --ambra: #f5a524;
+    --testo: #e6edf6;
+    --testo-secondario: #cbd5e1;
+    --etichetta: #94a3b8;
+    --bordo: rgba(255, 255, 255, 0.10);
+    --larghezza: 1280px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--testo);
+    background-color: var(--blu-fondo);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--azzurro);
+}
+
+a:focus-visible,
+.logo-wrapper:focus-visible {
+    outline: 3px solid var(--azzurro);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* =========================================================
+   Apertura
+   I percorsi delle immagini sono relativi (image/...), non
+   assoluti (/image/...), così funzionano anche in locale e in
+   sottocartella. Sotto la foto c'è una sfumatura di riserva:
+   se l'immagine manca, la pagina resta leggibile.
+   Il velo scuro sopra la foto è più leggero che in precedenza:
+   il vigneto si deve vedere, il testo deve restare leggibile.
+   ========================================================= */
+.hero {
+    padding: 26px 18px 34px;
+    background-color: var(--blu-fondo);
+    background-image:
+        linear-gradient(rgba(8, 13, 24, 0.62), rgba(8, 13, 24, 0.86)),
+        url('image/tuscany-vineyard-background.jpg'),
+        radial-gradient(120% 80% at 20% 0%, #1d3a2c 0%, #101a26 55%, #0b0f19 100%);
+    background-size: cover, cover, cover;
+    background-position: center, center, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+}
+
+.hero-inner {
+    max-width: var(--larghezza);
+    margin: 0 auto;
+}
+
+/* --- Intestazione --- */
+.header-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 26px;
+}
+
+/* Il logo è un JPG su fondo bianco: sta dentro una targhetta chiara,
+   altrimenti sul fondo scuro si vedrebbe un rettangolo bianco netto. */
+.logo-wrapper {
+    display: inline-flex;
+    align-items: center;
+    background: #fff;
+    padding: 8px 14px;
+    border-radius: 10px;
+    line-height: 0;
+    text-decoration: none;
+}
+
+.logo-lockup {
+    width: auto;
+    height: 30px;
+    display: block;
+}
+
+.launch-badge {
+    margin: 0;
+    background-color: rgba(245, 165, 36, 0.16);
+    border: 1px solid rgba(245, 165, 36, 0.55);
+    color: var(--ambra);
+    padding: 6px 13px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+}
+
+/* --- Testo di apertura --- */
+.payoff {
+    margin: 0 0 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--azzurro);
+}
+
+.main-title {
+    font-size: 2rem;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    margin: 0 0 18px;
+    font-weight: 700;
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
+}
+
+.main-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--testo-secondario);
+    max-width: 60ch;
+    margin: 0 0 22px;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Riga sul pubblico a cui parliamo. */
+.audience {
+    margin: 0 0 34px;
+    font-size: 0.9rem;
+    color: var(--etichetta);
+}
+
+/* Pulsante di contatto: le regole restano qui, pronte per quando
+   la casella di posta sarà attiva e il blocco tornerà in pagina. */
+.hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    margin: 0 0 34px;
+}
+
+.button {
+    display: inline-block;
+    background: var(--azzurro);
+    color: #06243a;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 26px;
+    border-radius: 8px;
+}
+
+.button:hover {
+    background: #7dd3fc;
+}
+
+.cta-note {
+    font-size: 0.85rem;
+    color: var(--etichetta);
+    max-width: 34ch;
+}
+
+/* --- I tre pilastri --- */
+.pillars {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+.pillar {
+    background: var(--blu-pannello);
+    border: 1px solid var(--bordo);
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+/* Lo stato non è decorativo: dice a che punto è ogni pilastro. */
+.pillar-status {
+    margin: 0 0 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--etichetta);
+}
+
+.pillar-status-attivo {
+    color: var(--verde);
+}
+
+.pillar-title {
+    margin: 0 0 8px;
+    font-size: 1.15rem;
+    line-height: 1.25;
+    color: var(--azzurro);
+}
+
+.pillar-text {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--testo-secondario);
+}
+
+/* =========================================================
+   Il dato alla scala della singola pianta
+   ========================================================= */
+.value {
+    background: var(--blu-scuro);
+    border-top: 1px solid var(--bordo);
+    padding: 44px 18px 46px;
+}
+
+.value-inner {
+    max-width: var(--larghezza);
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin: 0 0 12px;
+}
+
+.section-lead {
+    margin: 0 0 22px;
+    color: var(--testo-secondario);
+    max-width: 46ch;
+}
+
+.value-photo {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--bordo);
+    display: block;
+    margin-bottom: 30px;
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.value-item {
+    border-left: 2px solid rgba(56, 189, 248, 0.45);
+    padding-left: 16px;
+}
+
+.value-title {
+    margin: 0 0 6px;
+    font-size: 1.02rem;
+    line-height: 1.3;
+    color: var(--azzurro);
+}
+
+.value-item p {
+    margin: 0;
+    font-size: 0.93rem;
+    line-height: 1.6;
+    color: var(--testo-secondario);
+    max-width: 54ch;
+}
+
+/* =========================================================
+   Chiusura, di nuovo sulla fotografia del vigneto
+   ========================================================= */
+.closing {
+    padding: 46px 18px 48px;
+    background-color: #101a26;
+    background-image:
+        linear-gradient(rgba(8, 13, 24, 0.70), rgba(8, 13, 24, 0.88)),
+        url('image/tuscany-vineyard-background.jpg'),
+        linear-gradient(160deg, #1d3a2c, #0b0f19);
+    background-size: cover, cover, cover;
+    background-position: center, center 65%, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    border-top: 1px solid var(--bordo);
+}
+
+.closing-inner {
+    max-width: var(--larghezza);
+    margin: 0 auto;
+}
+
+.closing-line {
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.3;
+    max-width: 22ch;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
+}
+
+.closing-text {
+    margin: 0;
+    color: var(--testo-secondario);
+    max-width: 48ch;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55);
+}
+
+/* =========================================================
+   Piè di pagina
+   ========================================================= */
+.main-footer {
+    background: var(--blu-fondo);
+    border-top: 1px solid var(--bordo);
+    padding: 26px 18px 30px;
+    color: var(--etichetta);
+    font-size: 0.85rem;
+}
+
+.footer-inner {
+    max-width: var(--larghezza);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-inner p {
+    margin: 0;
+}
+
+.footer-brand {
+    color: var(--testo);
+    font-weight: 700;
+}
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+@media screen and (min-width: 720px) {
+    .hero {
+        padding: 34px 32px 44px;
+    }
+
+    .main-title {
+        font-size: 2.6rem;
+    }
+
+    .main-description {
+        font-size: 1.05rem;
+    }
+
+    .pillars {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .value {
+        padding: 56px 32px 58px;
+    }
+
+    .value-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 36px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .closing {
+        padding: 60px 32px 62px;
+    }
+
+    .closing-line {
+        font-size: 1.7rem;
+    }
+
+    .logo-lockup {
+        height: 34px;
+    }
+
+    .footer-inner {
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 18px;
+    }
+}
+
+/* =========================================================
+   Desktop: testo a sinistra, pilastri a destra.
+   Il velo sull'apertura diventa orizzontale, più fitto dove
+   c'è il testo e più leggero sulla destra, così la fotografia
+   del vigneto resta visibile.
+   ========================================================= */
+@media screen and (min-width: 1024px) {
+    .hero {
+        padding: 52px 56px 60px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background-image:
+            linear-gradient(100deg, rgba(8, 13, 24, 0.92) 0%, rgba(8, 13, 24, 0.80) 42%, rgba(8, 13, 24, 0.48) 100%),
+            url('image/tuscany-vineyard-background.jpg'),
+            radial-gradient(120% 80% at 20% 0%, #1d3a2c 0%, #101a26 55%, #0b0f19 100%);
+    }
+
+    .hero-inner {
+        width: 100%;
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+        column-gap: 60px;
+        align-items: center;
+    }
+
+    .main-title {
+        font-size: 3.1rem;
+    }
+
+    .audience,
+    .hero-cta {
+        margin-bottom: 0;
+    }
+
+    .pillars {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .value-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+        column-gap: 60px;
+        align-items: start;
+    }
+
+    .value-photo {
+        max-height: 280px;
+        margin-bottom: 0;
+    }
+
+    .closing-line {
+        font-size: 2rem;
+    }
+
+    .logo-lockup {
+        height: 38px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .main-title {
+        font-size: 3.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+@media print {
+    .hero, .value, .closing, .main-footer {
+        background: #fff;
+        color: #000;
+    }
+}
