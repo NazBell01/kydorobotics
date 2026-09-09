@@ -1,2 +1,0 @@
-# kydorobotics
-landing page
