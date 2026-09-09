@@ -4,8 +4,9 @@ body, html {
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
-    background-color: #000;
+    background-color: #0b0f19;
     -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
 }
 
 /* --- Container principale con sfondo --- */
@@ -15,10 +16,10 @@ body, html {
     flex-direction: column;
     padding: 20px;
     box-sizing: border-box;
-    /* PERCORSO AGGIORNATO */
     background-image: url('/image/tuscany-vineyard-background.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     position: relative;
     overflow-x: hidden;
 }
@@ -31,11 +32,10 @@ body, html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(10, 15, 25, 0.75);
     z-index: 1;
 }
 
-/* Testo e elementi sopra gli overlay decorativi */
 .page-container > * {
     position: relative;
     z-index: 3;
@@ -43,7 +43,7 @@ body, html {
 
 /* --- Header --- */
 .main-header {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
@@ -52,7 +52,7 @@ body, html {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .logo-wrapper {
@@ -62,20 +62,21 @@ body, html {
 }
 
 .logo-icon {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     object-fit: contain;
 }
 
 .logo-text {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .launch-badge {
     background-color: #f39c12;
+    color: #000;
     padding: 6px 15px;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -83,17 +84,17 @@ body, html {
 }
 
 .main-title {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     margin: 10px 0;
     line-height: 1.2;
 }
 
 .main-description {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: #eee;
-    max-width: 600px;
-    margin: 0 auto 20px auto;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 /* --- UI Dashboard --- */
@@ -105,10 +106,12 @@ body, html {
 }
 
 .widget {
-    background: rgba(25, 25, 25, 0.85);
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    backdrop-filter: blur(8px);
 }
 
 .widget-header {
@@ -118,7 +121,7 @@ body, html {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #f39c12;
+    color: #38bdf8;
 }
 
 .widget-data {
@@ -139,7 +142,7 @@ body, html {
 }
 
 .label {
-    color: #bbb;
+    color: #94a3b8;
     font-size: 0.8rem;
 }
 
@@ -153,53 +156,54 @@ body, html {
 .od-image-wrapper {
     width: 100%;
     height: 150px;
-    background-color: #333;
+    background-color: #1e293b;
     border-radius: 8px;
     overflow: hidden;
     position: relative;
-    /* PERCORSO AGGIORNATO */
     background-image: url('/image/grape-leaf.jpg');
     background-size: cover;
     background-position: center;
 }
 
-/* Simulazione della scatola di delimitazione */
 .bounding-box {
     position: absolute;
     top: 25%;
     left: 20%;
     width: 50%;
     height: 50%;
-    border: 3px solid #3498db;
+    border: 3px solid #38bdf8;
     box-sizing: border-box;
 }
 
 .od-data {
     font-size: 0.85rem;
-    color: #ddd;
+    color: #cbd5e1;
     text-align: center;
 }
 
 /* --- Footer --- */
-.main-footer {
+media-footer, .main-footer {
     margin-top: auto;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     padding: 20px 0;
-    color: #bbb;
+    color: #94a3b8;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* --- Media Queries per Desktop --- */
-@media screen and (min-width: 768px) {
+/* --- Media Queries per Desktop (Layout a griglia affiancato) --- */
+@media screen and (min-width: 1024px) {
     .page-container {
-        padding: 60px;
+        display: grid;
+        grid-template-columns: 1fr 420px;
+        gap: 50px;
+        align-items: center;
+        padding: 40px 60px;
     }
 
     .main-header {
         text-align: left;
-        max-width: 55%;
-        margin-left: 0;
-        margin-right: auto;
+        margin-bottom: 0;
     }
 
     .header-top {
@@ -211,16 +215,17 @@ body, html {
     }
 
     .main-description {
-        font-size: 1.1rem;
-        margin-left: 0;
+        margin: 0;
+        max-width: 100%;
     }
 
     .ui-dashboard {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-        max-width: 380px;
-        position: absolute;
-        top: 60px;
-        right: 60px;
+        margin-bottom: 0;
+    }
+    
+    .main-footer {
+        grid-column: 1 / -1;
     }
 }
