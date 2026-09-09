@@ -15,8 +15,8 @@ body, html {
     flex-direction: column;
     padding: 20px;
     box-sizing: border-box;
-    /* Collegamento verbatim all'immagine di sfondo generata */
-    background-image: url('tuscany-vineyard-background.jpg');
+    /* PERCORSO AGGIORNATO */
+    background-image: url('image/tuscany-vineyard-background.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -62,7 +62,7 @@ body, html {
 }
 
 .logo-icon {
-    width: 30px; /* Altezza simulata verbatim */
+    width: 30px;
     height: 30px;
     object-fit: contain;
 }
@@ -157,8 +157,8 @@ body, html {
     border-radius: 8px;
     overflow: hidden;
     position: relative;
-    /* Collegamento verbatim all'immagine della foglia generata */
-    background-image: url('grape-leaf.jpg');
+    /* PERCORSO AGGIORNATO */
+    background-image: url('image/grape-leaf.jpg');
     background-size: cover;
     background-position: center;
 }
