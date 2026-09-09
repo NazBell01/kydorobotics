@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script di build per Kydorobotics
+# Script di build per Kydorobotics - AGGIORNATO per nuova struttura immagini e formato JPG
 
 echo "🚀 Avvio della build di Kydorobotics..."
 echo "📂 Elenco dei file attuali:"
@@ -15,10 +15,10 @@ else
     exit 1
 }
 
-# Controllo della presenza delle immagini collegate verbatim
-echo "🔍 Controllo della presenza delle immagini collegate verbatim..."
-if [ -f "tuscany-vineyard-background.jpg" ]; then echo "   ✅ tuscany-vineyard-background.jpg trovata."; else echo "❌ tuscany-vineyard-background.jpg NON trovata."; exit 1; fi
-if [ -f "grape-leaf.jpg" ]; then echo "   ✅ grape-leaf.jpg trovata."; else echo "❌ grape-leaf.jpg NON trovata."; exit 1; fi
-if [ -f "logo-icon.png" ]; then echo "   ✅ logo-icon.png trovata."; else echo "❌ logo-icon.png NON trovata."; exit 1; fi
+# Controllo della presenza delle immagini collegate verbatim NELLA NUOVA CARTELLA
+echo "🔍 Controllo della presenza delle immagini collegate verbatim in image/..."
+if [ -f "image/tuscany-vineyard-background.jpg" ]; then echo "   ✅ tuscany-vineyard-background.jpg trovata."; else echo "❌ tuscany-vineyard-background.jpg NON trovata."; exit 1; fi
+if [ -f "image/grape-leaf.jpg" ]; then echo "   ✅ grape-leaf.jpg trovata."; else echo "❌ grape-leaf.jpg NON trovata."; exit 1; fi
+if [ -f "image/logo-icon.jpg" ]; then echo "   ✅ logo-icon.jpg trovata."; else echo "❌ logo-icon.jpg NON trovata."; exit 1; fi
 
 echo "🎉 Build completata con successo! I file sono pronti per il caricamento su GitHub."
