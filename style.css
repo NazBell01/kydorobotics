@@ -125,6 +125,34 @@ a:focus-visible,
     display: block;
 }
 
+/* I due badge in testata, uno sotto l'altro. */
+.badges {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+/* Badge EIMA: stesso formato del badge di lancio, verde, porta al riquadro #eima. */
+.news-badge {
+    display: inline-block;
+    background-color: rgba(110, 231, 165, 0.14);
+    border: 1px solid rgba(110, 231, 165, 0.55);
+    color: var(--verde);
+    padding: 7px 15px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+}
+
+.news-badge:hover,
+.news-badge:focus-visible {
+    background-color: rgba(110, 231, 165, 0.26);
+}
+
 .launch-badge {
     margin: 0;
     background-color: rgba(245, 165, 36, 0.16);
@@ -233,6 +261,30 @@ a:focus-visible,
     font-size: 0.85rem;
     color: var(--etichetta);
     max-width: 34ch;
+}
+
+/* Novità sotto il pulsante (EIMA 2026). Riga sobria, stesso tono del badge. */
+.hero-news {
+    margin: 22px 0 0;
+    max-width: 60ch;
+    padding: 12px 16px;
+    border-left: 3px solid var(--ambra);
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 0 8px 8px 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--testo);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero-news-label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ambra);
 }
 
 /* --- I tre pilastri --- */
