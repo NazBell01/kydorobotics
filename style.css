@@ -277,6 +277,15 @@ a:focus-visible,
     text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
 
+.hero-news-link {
+    display: inline-block;
+    margin-top: 6px;
+    color: var(--azzurro);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 .hero-news-label {
     display: block;
     margin-bottom: 4px;
