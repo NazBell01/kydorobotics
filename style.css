@@ -990,3 +990,149 @@ a:focus-visible,
         margin-bottom: 0;
     }
 }
+
+/* =========================================================
+   Navigazione (28/11/2026): menu fisso, tendine, «torna su».
+   Niente JavaScript: le tendine sono <details>, il menu è
+   una riga di collegamenti che su telefono scorre di lato.
+   ========================================================= */
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(8, 12, 21, 0.92);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--bordo);
+}
+
+.site-nav-list {
+    max-width: var(--larghezza);
+    margin: 0 auto;
+    padding: 0 10px;
+    list-style: none;
+    display: flex;
+    gap: 2px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.site-nav-list::-webkit-scrollbar {
+    display: none;
+}
+
+.site-nav-list a {
+    display: block;
+    padding: 12px 11px;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--testo-secondario);
+    text-decoration: none;
+}
+
+.site-nav-list a:hover,
+.site-nav-list a:focus-visible {
+    color: var(--azzurro);
+}
+
+/* Le sezioni non finiscono sotto il menu quando ci si salta sopra. */
+section[id] {
+    scroll-margin-top: 52px;
+}
+
+/* --- Tendine --- */
+details.more {
+    margin-top: 18px;
+    border-top: 1px solid var(--bordo);
+}
+
+details.more > summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 14px 0;
+    font-weight: 600;
+    color: var(--azzurro);
+}
+
+details.more > summary::-webkit-details-marker {
+    display: none;
+}
+
+details.more > summary::after {
+    content: " +";
+}
+
+details.more[open] > summary::after {
+    content: " \2212";
+}
+
+details.more > summary:focus-visible {
+    outline: 2px solid var(--azzurro);
+    outline-offset: 3px;
+}
+
+/* Nel layout a due colonne la tendina occupa la colonna di destra. */
+@media screen and (min-width: 1024px) {
+    .value-inner > details.more,
+    .method-inner > details.more,
+    .uvc-inner > details.more {
+        margin-top: 0;
+    }
+}
+
+/* --- Apertura senza pilastri: una colonna sola --- */
+@media screen and (min-width: 1024px) {
+    .hero {
+        min-height: 82vh;
+    }
+
+    .hero-inner {
+        grid-template-columns: minmax(0, 780px);
+    }
+}
+
+.pillars-lower {
+    margin-top: 6px;
+}
+
+.pillars-lower .pillar {
+    box-shadow: none;
+}
+
+/* --- Torna su --- */
+.to-top {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 40;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blu-pannello);
+    border: 1px solid var(--bordo);
+    color: var(--testo);
+    font-size: 1.2rem;
+    text-decoration: none;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+.to-top:hover,
+.to-top:focus-visible {
+    color: var(--azzurro);
+}
+
+@media print {
+    .site-nav,
+    .to-top {
+        display: none;
+    }
+
+    details.more > * {
+        display: block;
+    }
+}

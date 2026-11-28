@@ -53,3 +53,14 @@ e sostituire `info@kydorobotics.com` con l'indirizzo vero.
 Le affermazioni vietate dal file `argomento-tecnico.md` non sono rientrate dalla finestra:
 in pagina non si parla di diagnosi, di guida autonoma, di precisione millimetrica né di
 percentuali di accuratezza.
+
+## Navigazione (28/11/2026)
+
+- Menu fisso in alto con le sezioni (Prodotti, Rilievo, Metodo, UV-C, Contatti); su telefono
+  scorre di lato. Le sezioni hanno uno spazio in alto per non finire sotto il menu.
+- I blocchi lunghi sono tendine (`<details class="more">`): su telefono partono chiuse, su schermi
+  da 1024 px in su un piccolo script le apre. Senza JavaScript restano chiuse e si aprono a mano.
+- I tre pilastri (rilievo, elettrificazione, rete industriale) non stanno più nell'apertura:
+  sono nella sezione «Dove andiamo», prima della chiusura, in una tendina.
+- Pulsante «torna su» fisso in basso a destra.
+- Lunghezza su telefono (390 px): da circa 7,8 a circa 4,9 schermate con le tendine chiuse.

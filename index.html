@@ -24,9 +24,20 @@
     <link rel="canonical" href="https://kydorobotics.com/">
 
     <link rel="icon" href="image/logo-icon.jpg">
-    <link rel="stylesheet" href="style.css?v=16">
+    <link rel="stylesheet" href="style.css?v=17">
 </head>
-<body>
+<body id="top">
+
+    <!-- ============ Menu delle sezioni (28/11/2026) ============ -->
+    <nav class="site-nav" aria-label="Sezioni del sito">
+        <ul class="site-nav-list">
+            <li><a href="#prodotti">Prodotti</a></li>
+            <li><a href="#rilievo">Rilievo</a></li>
+            <li><a href="#metodo">Metodo</a></li>
+            <li><a href="#uvc">UV-C</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+        </ul>
+    </nav>
 
     <!-- ============ Apertura ============ -->
     <div class="hero">
@@ -74,39 +85,6 @@
                 </p>
             </header>
 
-            <section class="pillars" aria-label="I tre pilastri di Kydo Robotics">
-
-                <article class="pillar">
-                    <p class="pillar-status pillar-status-attivo">Ci lavoriamo adesso</p>
-                    <h2 class="pillar-title">Rilievo di prossimità</h2>
-                    <p class="pillar-text">
-                        La parete di foglie e grappoli vista da vicino, pianta per pianta, con luce propria
-                        e una centralina meteo a bordo. Ogni rilievo porta data e posizione, così alla visita
-                        successiva si ritrova la stessa vite.
-                    </p>
-                </article>
-
-                <article class="pillar">
-                    <p class="pillar-status pillar-status-prossimo">Il passo successivo, dopo la prima stagione in vigna</p>
-                    <h2 class="pillar-title">Elettrificazione sicura</h2>
-                    <p class="pillar-text">
-                        Ibrido e full-electric a basso voltaggio, dove la sicurezza di chi conduce la macchina
-                        viene prima della prestazione. Il full-electric è la destinazione, l'ibrido è il passo
-                        che oggi la rende praticabile senza sacrificare la giornata di lavoro.
-                    </p>
-                </article>
-
-                <article class="pillar">
-                    <p class="pillar-status pillar-status-parallelo">In parallelo: stiamo scegliendo i partner</p>
-                    <h2 class="pillar-title">Rete industriale internazionale</h2>
-                    <p class="pillar-text">
-                        Sviluppo e forniture insieme a partner tecnologici selezionati, soprattutto nei poli
-                        manifatturieri asiatici. Assemblaggio finale, collaudo e responsabilità del costruttore
-                        restano in Europa.
-                    </p>
-                </article>
-
-            </section>
 
         </div>
     </div>
@@ -170,44 +148,47 @@
                 </figure>
             </div>
 
-            <div class="value-grid">
-
-                <article class="value-item">
-                    <h3 class="value-title">La fascia produttiva, vista di lato</h3>
-                    <p>
-                        Grappoli e sintomi stanno sulla parete verticale, sotto le foglie apicali.
-                        Il rover li riprende da vicino e a distanza costante mentre percorre l'interfilare,
-                        nella posizione in cui compaiono.
-                    </p>
-                </article>
-
-                <article class="value-item">
-                    <h3 class="value-title">Rilievi che si possono confrontare</h3>
-                    <p>
-                        L'illuminazione propria rende sovrapponibili le acquisizioni nelle ore di bassa luce,
-                        all'alba, al tramonto e di notte. Due passaggi a settimane di distanza restano
-                        leggibili uno accanto all'altro.
-                    </p>
-                </article>
-
-                <article class="value-item">
-                    <h3 class="value-title">Il microclima del tuo filare</h3>
-                    <p>
-                        Temperatura, umidità, pioggia e bagnatura fogliare registrate lungo tutto il percorso.
-                        Un profilo del vigneto invece del valore puntuale di una stazione fissa, ed è quello
-                        che i modelli previsionali chiedono in ingresso.
-                    </p>
-                </article>
-
-                <article class="value-item">
-                    <h3 class="value-title">Ogni ceppo ha una storia</h3>
-                    <p>
-                        Ogni acquisizione esce datata e georeferenziata, così alla visita successiva si torna
-                        sulla stessa pianta. È l'anagrafe del vigneto, che si costruisce stagione dopo stagione.
-                    </p>
-                </article>
-
-            </div>
+            <details class="more">
+                <summary>Che cosa dà il rilievo: quattro punti</summary>
+                <div class="value-grid">
+    
+                    <article class="value-item">
+                        <h3 class="value-title">La fascia produttiva, vista di lato</h3>
+                        <p>
+                            Grappoli e sintomi stanno sulla parete verticale, sotto le foglie apicali.
+                            Il rover li riprende da vicino e a distanza costante mentre percorre l'interfilare,
+                            nella posizione in cui compaiono.
+                        </p>
+                    </article>
+    
+                    <article class="value-item">
+                        <h3 class="value-title">Rilievi che si possono confrontare</h3>
+                        <p>
+                            L'illuminazione propria rende sovrapponibili le acquisizioni nelle ore di bassa luce,
+                            all'alba, al tramonto e di notte. Due passaggi a settimane di distanza restano
+                            leggibili uno accanto all'altro.
+                        </p>
+                    </article>
+    
+                    <article class="value-item">
+                        <h3 class="value-title">Il microclima del tuo filare</h3>
+                        <p>
+                            Temperatura, umidità, pioggia e bagnatura fogliare registrate lungo tutto il percorso.
+                            Un profilo del vigneto invece del valore puntuale di una stazione fissa, ed è quello
+                            che i modelli previsionali chiedono in ingresso.
+                        </p>
+                    </article>
+    
+                    <article class="value-item">
+                        <h3 class="value-title">Ogni ceppo ha una storia</h3>
+                        <p>
+                            Ogni acquisizione esce datata e georeferenziata, così alla visita successiva si torna
+                            sulla stessa pianta. È l'anagrafe del vigneto, che si costruisce stagione dopo stagione.
+                        </p>
+                    </article>
+    
+                </div>
+            </details>
 
         </div>
     </section>
@@ -225,64 +206,70 @@
                 </p>
             </div>
 
-            <ol class="method-levels">
+            <details class="more">
+                <summary>I tre livelli, uno per uno</summary>
+                <ol class="method-levels">
+    
+                    <li class="level">
+                        <h3 class="level-title">La vigna intera, dal satellite</h3>
+                        <p>
+                            Un satellite pubblico passa sulla vigna ogni pochi giorni e misura quanto verde c'è.
+                            La serie storica parte dal 2017: ogni annata si confronta con le precedenti e con la
+                            campagna intorno, così si capisce se un calo riguarda solo la tua vigna o tutta la zona,
+                            e dove conviene andare a guardare.
+                        </p>
+                    </li>
+    
+                    <li class="level">
+                        <h3 class="level-title">Il rischio, dal meteo</h3>
+                        <p>
+                            Temperatura, umidità, pioggia e bagnatura fogliare alimentano i modelli previsionali,
+                            che indicano quando le condizioni favoriscono peronospora e oidio. È il dato che
+                            permette di muoversi prima che la malattia si veda.
+                        </p>
+                    </li>
+    
+                    <li class="level">
+                        <h3 class="level-title">La singola pianta, da terra</h3>
+                        <p>
+                            Le riprese ravvicinate, oggi a piedi e dalla primavera 2027 con il rover, arrivano
+                            al singolo ceppo. È la scala a cui compaiono i sintomi sulla foglia, come la tigratura
+                            del mal dell'esca, ed è il livello che permette di tornare sulla stessa vite alla
+                            visita successiva.
+                        </p>
+                    </li>
+    
+                </ol>
+            </details>
 
-                <li class="level">
-                    <h3 class="level-title">La vigna intera, dal satellite</h3>
-                    <p>
-                        Un satellite pubblico passa sulla vigna ogni pochi giorni e misura quanto verde c'è.
-                        La serie storica parte dal 2017: ogni annata si confronta con le precedenti e con la
-                        campagna intorno, così si capisce se un calo riguarda solo la tua vigna o tutta la zona,
-                        e dove conviene andare a guardare.
-                    </p>
-                </li>
-
-                <li class="level">
-                    <h3 class="level-title">Il rischio, dal meteo</h3>
-                    <p>
-                        Temperatura, umidità, pioggia e bagnatura fogliare alimentano i modelli previsionali,
-                        che indicano quando le condizioni favoriscono peronospora e oidio. È il dato che
-                        permette di muoversi prima che la malattia si veda.
-                    </p>
-                </li>
-
-                <li class="level">
-                    <h3 class="level-title">La singola pianta, da terra</h3>
-                    <p>
-                        Le riprese ravvicinate, oggi a piedi e dalla primavera 2027 con il rover, arrivano
-                        al singolo ceppo. È la scala a cui compaiono i sintomi sulla foglia, come la tigratura
-                        del mal dell'esca, ed è il livello che permette di tornare sulla stessa vite alla
-                        visita successiva.
-                    </p>
-                </li>
-
-            </ol>
-
-            <div class="proof-list">
-
-                <aside class="method-proof" aria-label="Il metodo al lavoro, primo vigneto">
-                    <p class="proof-title">Un vigneto nelle Marche</p>
-                    <p class="proof-text">
-                        La serie del satellite ricostruita dal 2017 e un bollettino periodico che continua
-                        stagione dopo stagione. Nell'ultimo numero, una vite con le foglie tigrate fotografata
-                        in filare è stata letta insieme all'andamento del verde e a una settimana di caldo.
-                        L'indicazione è stata una sola: segnare le piante malate prima che cada la foglia.
-                    </p>
-                </aside>
-
-                <aside class="method-proof" aria-label="Il metodo al lavoro, secondo vigneto">
-                    <p class="proof-title">Un vigneto in Emilia-Romagna</p>
-                    <p class="proof-text">
-                        Alla prima visita il satellite non aveva segnalato nulla in tutta la stagione, mentre
-                        una camminata di trecentocinquanta metri in un solo interfilare ha trovato sei anomalie,
-                        tre delle quali compatibili con il mal dell'esca. Non è un errore del satellite: un suo
-                        quadretto è di dieci metri per dieci e contiene una ventina di ceppi, e una pianta
-                        malata in mezzo a venti sane non sposta la media. La conferma sul legno spetta
-                        all'agronomo, ma è esattamente il buco che il rilievo da terra riempie.
-                    </p>
-                </aside>
-
-            </div>
+            <details class="more">
+                <summary>Due casi in vigna</summary>
+                <div class="proof-list">
+    
+                    <aside class="method-proof" aria-label="Il metodo al lavoro, primo vigneto">
+                        <p class="proof-title">Un vigneto nelle Marche</p>
+                        <p class="proof-text">
+                            La serie del satellite ricostruita dal 2017 e un bollettino periodico che continua
+                            stagione dopo stagione. Nell'ultimo numero, una vite con le foglie tigrate fotografata
+                            in filare è stata letta insieme all'andamento del verde e a una settimana di caldo.
+                            L'indicazione è stata una sola: segnare le piante malate prima che cada la foglia.
+                        </p>
+                    </aside>
+    
+                    <aside class="method-proof" aria-label="Il metodo al lavoro, secondo vigneto">
+                        <p class="proof-title">Un vigneto in Emilia-Romagna</p>
+                        <p class="proof-text">
+                            Alla prima visita il satellite non aveva segnalato nulla in tutta la stagione, mentre
+                            una camminata di trecentocinquanta metri in un solo interfilare ha trovato sei anomalie,
+                            tre delle quali compatibili con il mal dell'esca. Non è un errore del satellite: un suo
+                            quadretto è di dieci metri per dieci e contiene una ventina di ceppi, e una pianta
+                            malata in mezzo a venti sane non sposta la media. La conferma sul legno spetta
+                            all'agronomo, ma è esattamente il buco che il rilievo da terra riempie.
+                        </p>
+                    </aside>
+    
+                </div>
+            </details>
 
             <p class="proof-cta">
                 I bollettini che consegniamo restano privati.
@@ -301,25 +288,74 @@
                 <h2 class="section-title">Luce UV-C contro l'oidio, senza residui</h2>
             </div>
 
-            <div class="uvc-text">
-                <p>
-                    L'oidio impone ogni stagione una lunga serie di trattamenti, anche nei vigneti biologici.
-                    Stiamo sviluppando un modulo UV-C da montare sul rover che, di notte, espone foglie e
-                    grappoli a brevi dosi di luce ultravioletta mentre percorre il filare.
-                </p>
-                <p>
-                    Le prove in vigneto condotte dalla ricerca internazionale mostrano che, applicata al buio,
-                    questa luce contiene l'oidio senza effetti sulla crescita della vite né sulla resa, e senza
-                    lasciare nulla sull'uva. È una strada concreta per usare meno fitofarmaci, con un trattamento
-                    che si fa nelle stesse ore di buio in cui il rover è pensato per lavorare.
-                </p>
-            </div>
+            <details class="more">
+                <summary>Come funziona</summary>
+                <div class="uvc-text">
+                    <p>
+                        L'oidio impone ogni stagione una lunga serie di trattamenti, anche nei vigneti biologici.
+                        Stiamo sviluppando un modulo UV-C da montare sul rover che, di notte, espone foglie e
+                        grappoli a brevi dosi di luce ultravioletta mentre percorre il filare.
+                    </p>
+                    <p>
+                        Le prove in vigneto condotte dalla ricerca internazionale mostrano che, applicata al buio,
+                        questa luce contiene l'oidio senza effetti sulla crescita della vite né sulla resa, e senza
+                        lasciare nulla sull'uva. È una strada concreta per usare meno fitofarmaci, con un trattamento
+                        che si fa nelle stesse ore di buio in cui il rover è pensato per lavorare.
+                    </p>
+                </div>
+            </details>
 
         </div>
     </section>
 
+    <!-- ============ Dove andiamo: i tre pilastri, spostati dall'apertura il 28/11/2026 ============ -->
+    <section class="value directions" id="direzioni">
+        <div class="value-inner">
+            <div class="value-intro">
+                <h2 class="section-title">Dove andiamo</h2>
+                <p class="section-lead">Le tre direzioni di Kydo Robotics e a che punto è ciascuna.</p>
+            </div>
+            <details class="more">
+                <summary>Le tre direzioni</summary>
+                <section class="pillars pillars-lower" aria-label="I tre pilastri di Kydo Robotics">
+
+                    <article class="pillar">
+                        <p class="pillar-status pillar-status-attivo">Ci lavoriamo adesso</p>
+                        <h3 class="pillar-title">Rilievo di prossimità</h3>
+                        <p class="pillar-text">
+                            La parete di foglie e grappoli vista da vicino, pianta per pianta, con luce propria
+                            e una centralina meteo a bordo. Ogni rilievo porta data e posizione, così alla visita
+                            successiva si ritrova la stessa vite.
+                        </p>
+                    </article>
+
+                    <article class="pillar">
+                        <p class="pillar-status pillar-status-prossimo">Il passo successivo, dopo la prima stagione in vigna</p>
+                        <h3 class="pillar-title">Elettrificazione sicura</h3>
+                        <p class="pillar-text">
+                            Ibrido e full-electric a basso voltaggio, dove la sicurezza di chi conduce la macchina
+                            viene prima della prestazione. Il full-electric è la destinazione, l'ibrido è il passo
+                            che oggi la rende praticabile senza sacrificare la giornata di lavoro.
+                        </p>
+                    </article>
+
+                    <article class="pillar">
+                        <p class="pillar-status pillar-status-parallelo">In parallelo: stiamo scegliendo i partner</p>
+                        <h3 class="pillar-title">Rete industriale internazionale</h3>
+                        <p class="pillar-text">
+                            Sviluppo e forniture insieme a partner tecnologici selezionati, soprattutto nei poli
+                            manifatturieri asiatici. Assemblaggio finale, collaudo e responsabilità del costruttore
+                            restano in Europa.
+                        </p>
+                    </article>
+
+                </section>
+            </details>
+        </div>
+    </section>
+
     <!-- ============ Chiusura ============ -->
-    <section class="closing">
+    <section class="closing" id="contatti">
         <div class="closing-inner">
             <p class="closing-line">Complementare al rilievo aereo, non alternativo.</p>
             <p class="closing-text">
@@ -339,6 +375,15 @@
             <p class="footer-legal">&copy; 2026 Kydo Robotics. Marchio depositato. Domanda di brevetto depositata. Tutti i diritti riservati.</p>
         </div>
     </footer>
+
+    <a class="to-top" href="#top" aria-label="Torna su">&uarr;</a>
+
+    <script>
+        /* Su schermi larghi le tendine partono aperte: c'è spazio per leggere tutto. */
+        if (window.matchMedia('(min-width: 1024px)').matches) {
+            document.querySelectorAll('details.more').forEach(function (d) { d.open = true; });
+        }
+    </script>
 
 </body>
 </html>
