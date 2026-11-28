@@ -66,11 +66,10 @@ a:focus-visible,
     background-color: var(--blu-fondo);
     background-image:
         linear-gradient(rgba(8, 13, 24, 0.45), rgba(8, 13, 24, 0.72)),
-        url('image/tuscany-vineyard-background.jpg'),
         radial-gradient(120% 80% at 20% 0%, #1d3a2c 0%, #101a26 55%, #0b0f19 100%);
-    background-size: cover, cover, cover;
-    background-position: center, center, center;
-    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
 }
 
 .hero-inner {
@@ -683,11 +682,10 @@ a:focus-visible,
     background-color: #101a26;
     background-image:
         linear-gradient(rgba(8, 13, 24, 0.52), rgba(8, 13, 24, 0.76)),
-        url('image/tuscany-vineyard-background.jpg'),
         linear-gradient(160deg, #1d3a2c, #0b0f19);
-    background-size: cover, cover, cover;
-    background-position: center, center 65%, center;
-    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
     border-top: 1px solid var(--bordo);
 }
 
@@ -836,7 +834,6 @@ a:focus-visible,
         align-items: center;
         background-image:
             linear-gradient(100deg, rgba(8, 13, 24, 0.86) 0%, rgba(8, 13, 24, 0.62) 42%, rgba(8, 13, 24, 0.25) 100%),
-            url('image/tuscany-vineyard-background.jpg'),
             radial-gradient(120% 80% at 20% 0%, #1d3a2c 0%, #101a26 55%, #0b0f19 100%);
     }
 
@@ -950,5 +947,43 @@ a:focus-visible,
     .hero, .value, .method, .uvc, .docs, .closing, .main-footer {
         background: #fff;
         color: #000;
+    }
+}
+
+/* =========================================================
+   Due prodotti (28/11/2026) e didascalia della foto.
+   La sezione riusa le classi di «value»; qui solo le aggiunte.
+   ========================================================= */
+.products .value-item .pillar-status {
+    margin-bottom: 8px;
+}
+
+.products-note {
+    margin: 26px 0 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--testo-secondario);
+    max-width: 70ch;
+}
+
+.value-figure {
+    margin: 0;
+}
+
+.value-figure .value-photo {
+    object-position: center 40%;
+    margin-bottom: 8px;
+}
+
+.photo-caption {
+    margin: 0 0 30px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--testo-secondario);
+}
+
+@media screen and (min-width: 1024px) {
+    .photo-caption {
+        margin-bottom: 0;
     }
 }

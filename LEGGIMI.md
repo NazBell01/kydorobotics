@@ -1,26 +1,34 @@
 # Kydo Robotics, note sulla versione attuale
 
-## Le due fotografie
+## Le immagini (aggiornato il 28/11/2026)
 
-La pagina usa due immagini, che devono stare in `image/` con questi nomi esatti:
+La pagina usa una sola fotografia, in `image/`:
 
-- `tuscany-vineyard-background.jpg`, orizzontale, indicativamente 1920×1080, sotto i 400 kB;
-- `grape-leaf.jpg`, foglia di vite ripresa da vicino, bastano 800 px di lato.
+- `vigna-parete-foglia.jpg`, 1600 × 1200, foto vera di una ripresa di prova in vigna
+  (Marche, 26/08/2026), senza metadati e senza posizione GPS. Nessun nome di azienda.
 
-La foto del vigneto adesso compare due volte: dietro l'apertura e dietro la fascia di
-chiusura in fondo alla pagina. Il velo scuro che ci sta sopra è stato alleggerito, da 0,80
-a 0,62 nella parte alta, e su desktop è diventato orizzontale: fitto a sinistra dove c'è il
-testo, quasi trasparente a destra dove non c'è niente da leggere. Il vigneto si vede, il
-testo resta leggibile.
+Dal 28/11/2026 l'apertura e la fascia di chiusura non hanno più una foto dietro, ma solo lo
+sfumato scuro che prima faceva da riserva. La vecchia immagine di sfondo
+(`tuscany-vineyard-background.jpg`) era generata con l'AI e mostrava un rover con una scritta
+sbagliata e droni che irroravano: è stata tolta dal repository insieme a `grape-leaf.jpg`.
+Uno sfondo nuovo va solo da una foto vera, orizzontale, senza edifici, persone, targhe o
+macchine riconoscibili, e senza metadati.
 
-La sezione centrale ha invece un fondo pieno e non ha mai avuto la fotografia dietro:
-serve contrasto, altrimenti quattro blocchi di testo su una foto diventano illeggibili.
+Regole per ogni immagine nuova: niente immagini generate con l'AI che possano sembrare foto;
+niente immagini di prodotto (Core o Metal) finché Rino non lo decide; niente riquadri del
+riconoscimento; togliere sempre i metadati EXIF prima di caricare.
 
-Se una delle due immagini non compare, aprila da sola nel browser all'indirizzo
-`https://kydorobotics.com/image/tuscany-vineyard-background.jpg`. Se il browser non la
-mostra, il problema è nel file caricato, non nella pagina: va ricaricato con
-«Add file → Upload files», non con «Create new file». Attenzione anche alle maiuscole
-nell'estensione, `.JPG` e `.jpg` sono due nomi diversi per il server.
+Se un'immagine non compare, aprila da sola nel browser
+(`https://kydorobotics.com/image/vigna-parete-foglia.jpg`). Se il browser non la mostra,
+il problema è nel file caricato: va ricaricato con «Add file → Upload files». Attenzione alle
+maiuscole nell'estensione, `.JPG` e `.jpg` sono due nomi diversi per il server.
+
+## Due prodotti (28/11/2026)
+
+Dopo l'apertura c'è la sezione «Due prodotti, una sola tecnologia» (in inglese «Two
+products, one technology»): Kydo Core e Kydo Metal, la versione espandibile e su misura.
+Per Metal non si usano parole di gerarchia («più robusto», «Pro», «Premium») e il nome non
+si spiega con il materiale. Il fornitore dell'involucro non si nomina.
 
 ## Cosa è cambiato nei testi
 
