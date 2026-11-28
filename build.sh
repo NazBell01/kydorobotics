@@ -26,7 +26,7 @@ fi
 # dimensione e il tipo di file.
 echo
 echo "Controllo delle immagini in image/..."
-for IMG in image/vigna-parete-foglia.jpg image/logo-icon.jpg; do
+for IMG in image/vigna-interfilare-sfondo.jpg image/vigna-parete-foglia.jpg image/logo-icon.jpg; do
     if [ ! -f "$IMG" ]; then
         echo "  ERRORE: $IMG non trovata."
         ERRORI=$((ERRORI + 1))

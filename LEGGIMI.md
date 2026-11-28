@@ -2,17 +2,19 @@
 
 ## Le immagini (aggiornato il 28/11/2026)
 
-La pagina usa una sola fotografia, in `image/`:
+La pagina usa due fotografie vere, in `image/`, entrambe senza metadati:
 
-- `vigna-parete-foglia.jpg`, 1600 × 1200, foto vera di una ripresa di prova in vigna
-  (Marche, 26/08/2026), senza metadati e senza posizione GPS. Nessun nome di azienda.
+- `vigna-interfilare-sfondo.jpg`, 1234 × 684, interfilare con i grappoli (foto di Rino,
+  28/11/2026). Sta dietro l'apertura e la fascia di chiusura, sotto il velo scuro. Risoluzione
+  bassa per uno sfondo: va bene sotto il velo; se arriva una versione più grande (almeno
+  1920 px di lato) si sostituisce con lo stesso nome.
+- `vigna-parete-foglia.jpg`, 1600 × 1200, ripresa di prova in vigna (Marche, 26/08/2026),
+  senza posizione GPS. Nessun nome di azienda.
 
-Dal 28/11/2026 l'apertura e la fascia di chiusura non hanno più una foto dietro, ma solo lo
-sfumato scuro che prima faceva da riserva. La vecchia immagine di sfondo
-(`tuscany-vineyard-background.jpg`) era generata con l'AI e mostrava un rover con una scritta
-sbagliata e droni che irroravano: è stata tolta dal repository insieme a `grape-leaf.jpg`.
-Uno sfondo nuovo va solo da una foto vera, orizzontale, senza edifici, persone, targhe o
-macchine riconoscibili, e senza metadati.
+La vecchia immagine di sfondo (`tuscany-vineyard-background.jpg`) era generata con l'AI e
+mostrava un rover con una scritta sbagliata e droni che irroravano: tolta dal repository il
+28/11/2026, insieme a `grape-leaf.jpg`. Ogni sfondo nuovo va solo da una foto vera,
+orizzontale, senza edifici, persone, targhe o macchine riconoscibili.
 
 Regole per ogni immagine nuova: niente immagini generate con l'AI che possano sembrare foto;
 niente immagini di prodotto (Core o Metal) finché Rino non lo decide; niente riquadri del
